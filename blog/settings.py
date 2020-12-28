@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -198,6 +202,11 @@ EMAIL_PORT= 587
 
 
 
+cloudinary.config( 
+  cloud_name = "dru3nb4rr", 
+  api_key = "792219419485579", 
+  api_secret = "8hfWRkmp25C4XztqYQsY8HWw_JM" 
+)
 
 
 

@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse
 from tinymce import HTMLField
+from cloudinary.models import CloudinaryField
+
 
 User = get_user_model()
 
@@ -14,7 +16,7 @@ class PostView(models.Model):
 
 class Author(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
-	profile_pic=models.ImageField()
+	profile_pic=CloudinaryField('image')
 
 	def __str__(self):
 		return self.user.username
@@ -33,7 +35,7 @@ class Posting(models.Model):
 	comment_count=models.IntegerField(default=0)
 	#view_count=models.IntegerField(default=0)
 	author=models.ForeignKey(Author, on_delete=models.CASCADE)
-	thumbnail=models.ImageField()
+	thumbnail=CloudinaryField('image')
 	content = HTMLField()
 	categories=models.ManyToManyField(Category)
 	featured=models.BooleanField()
