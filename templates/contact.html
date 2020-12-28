@@ -1,0 +1,27 @@
+ 
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="col-4 offset-4 mb-5 mt-5">
+{% if name %}
+
+<center>
+<h2>Thanks for contacting. We will get intouch shortly</h2>
+</center>
+
+{% else %}
+
+<h1>Contact Form </h1>
+
+<form action="" method="POST">
+{% csrf_token %}
+{{ form|crispy }}
+<input type="submit" value="Submit"/>
+</form>
+
+{% endif %}
+
+</div>
+{% endblock content %}
+
