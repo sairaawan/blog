@@ -47,17 +47,12 @@ INSTALLED_APPS = [
     'filebrowser',
     'crispy_forms',
     'django.contrib.sites',
-    
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    
-    'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.google',
-    'storages',
-
-    
+    'storages',    
 ]
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
@@ -194,7 +189,7 @@ AUTHENTICATION_BACKENDS = [
     
 ]
 
-SITE_ID = 1
+SITE_ID = 4
 
 LOGIN_REDIRECT_URL = 'http://127.0.0.1:8000'
 
