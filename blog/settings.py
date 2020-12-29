@@ -47,17 +47,12 @@ INSTALLED_APPS = [
     'filebrowser',
     'crispy_forms',
     'django.contrib.sites',
-    
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    
-    'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.google',
-    'storages',
-
-    
+    'storages',    
 ]
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
