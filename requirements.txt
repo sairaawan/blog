@@ -39,6 +39,7 @@ pathspec==0.5.9
 pbr==5.4.5
 Pillow==7.1.2
 pipenv==2018.11.26
+psycopg2==2.8.6
 pycparser==2.20
 PyJWT==1.7.1
 pyparsing==2.4.7
